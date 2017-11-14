@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.keziandre.dothedue.MainActivity"
+    android:background="#9FAAAB"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--New Task Stuff-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <!--Header-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EDIT TASK"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:paddingTop="15dp"/>
+
+        </LinearLayout>
+
+        <!--<View-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#c9c7c7"-->
+        <!--android:layout_gravity="center">-->
+        <!--</View>-->
+
+        <!--Actual New Task Input-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+                <!--Task Title-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Due Title"/>
+
+                </LinearLayout>
+
+                <!--Date and Time-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/et_date"
+                        android:hint="Date"
+                        android:inputType="date"
+                        android:editable="false"
+                        android:clickable="true"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set Date"
+                        android:id="@+id/date_btn"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/et_time"
+                        android:hint="Time"
+                        android:editable="false"
+                        android:clickable="true"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set Time"
+                        android:id="@+id/time_btn"/>
+
+                </LinearLayout>
+
+                <!--Location-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/et_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Location"/>
+
+                </LinearLayout>
+
+                <!--Notes-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/et_notes"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:hint="Notes"/>
+
+                    <ImageButton
+                        android:id="@+id/addimage_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/add_image"
+                        android:backgroundTint="#fff"/>
+
+                </LinearLayout>
+
+                <!--Remind Me-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Remind Me"
+                        android:textSize="15sp"
+                        android:textColor="#000"
+                        android:layout_marginRight="10dp"/>
+
+                    <Spinner
+                        android:id="@+id/spin_reminder"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:layout_marginRight="10dp">
+
+                    </Spinner>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="before due"
+                        android:textSize="15sp"
+                        android:textColor="#000"/>
+
+                    <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Set"-->
+                    <!--android:id="@+id/reminder_btn"/>-->
+
+                </LinearLayout>
+
+                <!--Category and Color-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/category"
+                        android:layout_marginRight="50dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Category"
+                            android:textSize="10sp"
+                            android:textColor="#000"
+                            android:id="@+id/label_category"/>
+
+                        <Spinner
+                            android:id="@+id/spin_category"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"
+                            android:layout_below="@id/label_category">
+
+                        </Spinner>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/category">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Color"
+                            android:textSize="10sp"
+                            android:textColor="#000"
+                            android:id="@+id/label_color"/>
+
+                        <Spinner
+                            android:id="@+id/spin_color"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"
+                            android:layout_below="@id/label_color">
+
+                        </Spinner>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Done"
+                    android:layout_gravity="right"
+                    android:background="#b3efb7"
+                    android:textSize="15sp"
+                    android:id="@+id/done_button"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+    <!--NAVIGATION BAR-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:padding="3dp"
+        android:background="#eaa872">
+
+        <ImageButton
+            android:id="@+id/ibNewTask_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/home"
+            android:backgroundTint="#eaa872"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/ibNewTask_new"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/new1"
+            android:backgroundTint="#eaa872"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/ibNewTask_settings"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/settings"
+            android:backgroundTint="#eaa872"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

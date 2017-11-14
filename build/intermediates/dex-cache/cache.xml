@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/AndreGonzaga/Desktop/DoTheDue/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/AndreGonzaga/Desktop/DoTheDue/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6e6c7a4c2eb016993e6047d0695da70ae3d9dd3b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/AndreGonzaga/Desktop/DoTheDue/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5e1797c1e875f9ab27c9cc1e9c770573d18ad5fc">
+        <dex dex="/Users/AndreGonzaga/Desktop/DoTheDue/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ac3644b4d4cd5358ba23c61fef20cc6ec2a42f62/classes.dex" />
+    </item>
+
+</items>
